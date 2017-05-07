@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppProva</string>
+    <string-array name="Continentes">
+        <item>Africa</item>
+        <item>Americas</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Oceania</item>
+    </string-array>
+</resources>
