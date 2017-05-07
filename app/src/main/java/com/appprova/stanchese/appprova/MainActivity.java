@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements StringInterface {
         ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(this,R.array.Continentes,android.R.layout.simple_spinner_item);
         continentes.setAdapter(arrayAdapter);
 
-
     }
 
     public void listarPaises(View view) {
@@ -48,14 +47,17 @@ public class MainActivity extends AppCompatActivity implements StringInterface {
             JSONObject item = null;
             for (int i = 0; i < root.length(); i++) {
                 item = (JSONObject) root.get(i);
-                String nome = item.getString("name");
+                //String nome = item.getString("name");
                 String capital = item.getString("capital");
                 String area = item.getString("area");
                 String populacao = item.getString("population");
-                String bandeira = item.getString("flag");
+                String bandeira = item.getString("alpha2Code");
 
                 JSONArray itemJSONArray =  item.getJSONArray("currencies");
                 JSONObject rec = itemJSONArray.getJSONObject(0);
+
+                JSONObject translations =  item.getJSONObject("translations");
+                String nome = translations.getString("br");
 
                 String codigo = rec.getString("code");
                 String nomeMoeda = rec.getString("name");
@@ -63,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements StringInterface {
                 Moeda moeda = new Moeda(codigo,nomeMoeda,simbolo);
 
                 Pais pais = new Pais(nome,capital,area,populacao,moeda,bandeira);
-
                 this.lista.add(pais);
             }
 
@@ -78,4 +79,6 @@ public class MainActivity extends AppCompatActivity implements StringInterface {
             listView.setAdapter(listaAdapterPais);
         }
     }
+
+
 }

@@ -23,7 +23,7 @@ public class StringRequester extends AsyncTask<String, String, String> {
     @Override
     protected void onPreExecute() {
         progress = new ProgressDialog(context);
-        progress.setMessage("Carregando paises...");
+        progress.setMessage("Carregando...");
         progress.show();
     }
 
@@ -32,13 +32,13 @@ public class StringRequester extends AsyncTask<String, String, String> {
         String paises = null;
 
         try{
-            publishProgress("Ainda carregando...");
+            publishProgress("Carregando...");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url(params[0]).build();
             Response response = client.newCall(request).execute(); //error aqui
             paises = response.body().string();
 
-            publishProgress("Paises carregado!");
+            publishProgress("Carregado !");
         }
         catch(IOException e){}
 

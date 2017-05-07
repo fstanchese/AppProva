@@ -96,6 +96,7 @@ public class Pais implements Serializable {
                 ", area='" + area + '\'' +
                 ", populacao='" + populacao + '\'' +
                 ", moeda=" + moeda +
+                ", bandeira=" + bandeira +
                 '}';
     }
 }

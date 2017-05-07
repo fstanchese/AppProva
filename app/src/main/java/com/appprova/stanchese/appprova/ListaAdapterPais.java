@@ -1,5 +1,6 @@
 package com.appprova.stanchese.appprova;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,10 +39,18 @@ public class ListaAdapterPais extends ArrayAdapter<Pais> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Pais paisPosicao = this.lista.get(position);
-        convertView = LayoutInflater.from(this.context).inflate(R.layout.pais,null);
+        if (convertView == null) {
+            LayoutInflater layoutInflater = (LayoutInflater) getContext()
+                    .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            convertView = layoutInflater.inflate(R.layout.pais,null,true);
 
-        ImageView pais_bandeira = (ImageView) convertView.findViewById(R.id.pais_bandeira);
+        }
+
+        Pais paisPosicao = this.lista.get(position);
+
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.pais_bandeira);
+        Picasso.with(context).load("http://flagpedia.net/data/flags/normal/"+paisPosicao.getBandeira().toLowerCase()+".png").into(imageView);
+
         TextView pais_nome = (TextView) convertView.findViewById(R.id.pais_nome);
         TextView pais_capital = (TextView) convertView.findViewById(R.id.pais_capital);
         TextView pais_area = (TextView) convertView.findViewById(R.id.pais_area);
