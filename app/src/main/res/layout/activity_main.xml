@@ -13,8 +13,7 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="44dp"
         android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,5 +34,12 @@
         android:layout_below="@+id/continentes"
         android:onClick="listarPaises"
         android:text="Buscar Paises" />
+
+    <ListView
+        android:id="@+id/listarPaises"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buscarPaises" />
 
 </RelativeLayout>
