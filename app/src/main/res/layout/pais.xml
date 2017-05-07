@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <TextView
             android:id="@+id/pais_nome"
@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:lines="1"
             android:orientation="horizontal"
-            android:text="Nome do Pais"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40px"
             android:textStyle="bold" />
 
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,6 +44,7 @@
             android:lines="1"
             android:text="Capital: "
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40px"
             android:textStyle="bold" />
 
         <TextView
@@ -51,6 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lines="1"
+            android:textSize="40px"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
     </LinearLayout>
 
@@ -59,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,6 +69,7 @@
             android:lines="1"
             android:text="Área: "
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40px"
             android:textStyle="bold" />
 
         <TextView
@@ -74,6 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lines="1"
+            android:textSize="40px"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 
@@ -82,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,6 +94,7 @@
             android:lines="1"
             android:text="População: "
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40px"
             android:textStyle="bold" />
 
         <TextView
@@ -97,6 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lines="1"
+            android:textSize="40px"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
     <LinearLayout
@@ -104,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="2dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,6 +118,7 @@
             android:lines="1"
             android:text="Moeda: "
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40px"
             android:textStyle="bold" />
 
         <TextView
@@ -119,6 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lines="1"
+            android:textSize="40px"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 </LinearLayout>

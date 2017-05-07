@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements StringInterface {
                 JSONObject rec = itemJSONArray.getJSONObject(0);
 
                 JSONObject translations =  item.getJSONObject("translations");
-                String nome = translations.getString("br");
+                String nome = item.getString("name")+"("+translations.getString("br")+")";
 
                 String codigo = rec.getString("code");
                 String nomeMoeda = rec.getString("name");
